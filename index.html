@@ -71,6 +71,7 @@ p{margin:0}
 
 /* ——— Sélecteur de pays ——— */
 .flags{position:relative;margin-left:auto}
+.flags--static{margin-left:auto;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:20px;line-height:1;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line),var(--shadow-soft)}
 .top .btn{margin-left:10px}
 .flags summary{list-style:none;cursor:pointer;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
   font-size:20px;line-height:1;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line),var(--shadow-soft);transition:transform .2s,box-shadow .2s}
@@ -84,7 +85,6 @@ p{margin:0}
 .flags a[aria-current="true"]{color:var(--blue-deep)}
 .flags a svg{width:17px;height:17px;margin-left:auto;color:var(--blue)}
 .flags__flag{font-size:19px;line-height:1}
-@media (max-width:980px){.flags{margin-left:auto}}
 
 /* ——— Pays pris en charge (FAQ) ——— */
 .countries{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
@@ -600,7 +600,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
       <a href="#tarif">Tarif</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <details class="flags"><summary aria-label="Pays : Suisse. Changer de pays"><span aria-hidden="true">🇨🇭</span></summary><ul><li><a href="https://kmpro.app/?pays=fr" hreflang="fr-FR"><span class="flags__flag" aria-hidden="true">🇫🇷</span>France</a></li><li><a href="https://kmpro.ch/?pays=ch" hreflang="fr-CH" aria-current="true"><span class="flags__flag" aria-hidden="true">🇨🇭</span>Suisse<svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></a></li></ul></details>
+    <span class="flags--static" role="img" aria-label="Version Suisse">🇨🇭</span>
     <a class="btn btn--blue" href="#telecharger">Télécharger</a>
   </div>
 </header>
@@ -633,7 +633,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
     <div class="hero__visual">
       <figure class="hv-phone" style="margin:0"><img src="assets/demo-iphone-accueil.webp" width="760" height="1030" alt="iPhone posé sur une table en bois affichant l’accueil de KmPro : nouveau trajet, trajets favoris et totaux du mois (données de démonstration)" fetchpriority="high"></figure>
       <figure class="hv-mac" style="margin:0"><img src="assets/demo-mac-annee.webp" width="941" height="759" alt="MacBook affichant la vue annuelle de KmPro avec les kilomètres et montants mois par mois (données de démonstration)"></figure>
-      <div class="chip chip--cal" aria-hidden="true"><i><svg class="ic"><use href="#i-cal"/></svg></i><span>Trajet ajouté<small>Chantier · Annecy, 08:30</small></span></div>
+      <div class="chip chip--cal" aria-hidden="true"><i><svg class="ic"><use href="#i-cal"/></svg></i><span>Trajet ajouté<small>Chantier · Lausanne, 08:30</small></span></div>
       <div class="chip chip--ar" aria-hidden="true"><i><svg class="ic"><use href="#i-repeat"/></svg></i><span>Aller-retour · 84 km<small>calculé automatiquement</small></span></div>
       <div class="chip chip--rate" aria-hidden="true"><i><svg class="ic"><use href="#i-gauge"/></svg></i><span>CHF 0.75/km · 2026<small>taux de référence</small></span></div>
       <div class="chip chip--export" aria-hidden="true"><i><svg class="ic"><use href="#i-table"/></svg></i><span>Mars.xlsx · Mars.pdf<small>prêts à envoyer</small></span></div>
@@ -682,7 +682,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
         <div class="how__vis" aria-hidden="true">
           <div class="mini mini--cal">
             <div class="mini__day"><small>MARS</small><b>18</b></div>
-            <div class="mini__ev"><b>Chantier Morel</b><small>08:30 · Annecy</small></div>
+            <div class="mini__ev"><b>Chantier Morel</b><small>08:30 · Lausanne</small></div>
             <span class="mini__tag"><svg class="ic"><use href="#i-pin"/></svg>Déplacement professionnel</span>
           </div>
         </div>
@@ -693,7 +693,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
       <li class="how__step reveal">
         <div class="how__vis" aria-hidden="true">
           <div class="mini">
-            <div class="mini__line"><span>Bureau</span><i></i><span>Annecy</span></div>
+            <div class="mini__line"><span>Bureau</span><i></i><span>Lausanne</span></div>
             <div class="mini__row"><small>Aller-retour</small><b class="tnum">84 km</b></div>
             <div class="mini__total"><small>Montant</small><b class="tnum">CHF 63.00</b></div>
           </div>
@@ -761,7 +761,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
         <p class="itin__cap">Exemple. Une étape modifiée ? La distance est recalculée.</p>
       </div>
       <div class="split__media reveal">
-        <div class="shot" style="aspect-ratio:4/5;max-width:460px;margin-inline:auto"><img src="assets/demo-iphone-etapes.webp" width="760" height="1030" loading="lazy" alt="iPhone affichant un trajet à étapes dans KmPro : Lyon, Grenoble puis retour, sur une carte (données de démonstration)"></div>
+        <div class="shot" style="aspect-ratio:4/5;max-width:460px;margin-inline:auto"><img src="assets/demo-iphone-etapes.webp" width="760" height="1030" loading="lazy" alt="iPhone affichant un trajet à étapes dans KmPro : deux clients puis retour au bureau, sur une carte (données de démonstration)"></div>
       </div>
     </div>
 
@@ -773,7 +773,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
         <div class="favs" aria-label="Exemples de favoris">
           <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Bureau</span>
           <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>La Poste</span>
-          <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Client Annecy</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Client Lausanne</span>
           <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Garage</span>
         </div>
       </article>
@@ -793,7 +793,8 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
   </div>
 </section>
 
-<!-- BARÈME -->
+
+<!-- TAUX SUISSE -->
 <section class="sec" id="bareme" style="padding-top:0">
   <div class="wrap">
     <div class="sec__head">
@@ -804,7 +805,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
     <div class="bareme reveal">
       <div>
         <p class="k">Taux 2026</p>
-        <p class="ev tnum">CHF 0.75<span style="font-size:1.2rem;font-weight:650"> /km</span></p>
+        <p class="ev tnum">CHF 0.75<span style="font-size:1.3rem;font-weight:650"> /km</span></p>
         <p class="muted" style="font-size:15px">Taux de l’ordonnance fédérale sur les frais professionnels, aligné sur le prix au kilomètre du TCS.</p>
       </div>
       <div>
@@ -817,6 +818,91 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
         <h3>Le taux que retient votre fiduciaire</h3>
         <p class="muted" style="font-size:15px">Modifiable dans l’app si votre règlement de frais ou votre fiduciaire en retient un autre.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDRIER — [[ASSET_SCREEN_CALENDAR]] -->
+<section class="sec" id="calendrier" style="padding-top:0">
+  <div class="wrap split split--rev">
+    <div class="split__media reveal">
+      <div class="shot" style="aspect-ratio:4/5;max-width:460px;margin-inline:auto"><img src="assets/demo-iphone-trajets.webp" width="760" height="1030" loading="lazy" alt="iPhone affichant l’écran Trajets de KmPro avec le bouton Importer via vos calendriers (données de démonstration)"></div>
+    </div>
+    <div class="split__copy">
+      <p class="borne">Filet de sécurité</p>
+      <h2>Et pour les trajets que vous avez oublié de saisir ?</h2>
+      <p class="hero__lead">Votre calendrier devient votre filet de sécurité.</p>
+      <p class="aha"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg><span>Vos trajets sont peut-être déjà dans votre agenda : vous n’avez pas besoin de tous les saisir à la main.</span></p>
+      <p style="color:var(--ink-2)">KmPro peut analyser les rendez-vous présents dans les calendriers configurés sur votre appareil et vous proposer les déplacements correspondants, avec la date et l’adresse déjà remplies.</p>
+      <p class="cadence"><span><b>Vous vérifiez.</b></span> <span><b>Vous ajoutez.</b></span> <span><b>C’est fait.</b></span></p>
+      <p class="muted">Pratique pour retrouver un rendez-vous client ou un déplacement professionnel passé, sans fouiller manuellement toute votre année.</p>
+      <p class="privacy-note"><i><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></i>Le contenu de votre calendrier reste sur votre appareil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- iPHONE + MAC — [[ASSET_SCREEN_HOME_IOS]] [[ASSET_SCREEN_ANNUAL_MAC]] -->
+<section class="sec" id="iphone-mac" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="borne">iPhone + Mac</p>
+      <h2>Sur l’iPhone quand vous roulez. Sur le Mac quand vous faites vos comptes.</h2>
+    </div>
+    <div class="sync reveal">
+      <div class="shot shot--phone"><img src="assets/demo-iphone-accueil.webp" width="760" height="1030" loading="lazy" alt="iPhone affichant l’accueil de KmPro (données de démonstration)"></div>
+      <div class="sync__link" aria-hidden="true"><span class="sync__dots"></span><i><svg class="ic"><use href="#i-cloud"/></svg></i><span>iCloud privé</span><span class="sync__dots"></span></div>
+      <div class="shot shot--mac"><img src="assets/demo-mac-iphone.webp" width="941" height="759" loading="lazy" alt="MacBook et iPhone affichant les mêmes données KmPro, synchronisées par iCloud (données de démonstration)"></div>
+    </div>
+    <div class="sync__text">
+      <p><b>L’iPhone vous accompagne au quotidien.</b>Ajoutez rapidement un trajet, retrouvez vos favoris et consultez votre mois.</p>
+      <p><b>Le Mac vous donne la vision d’ensemble.</b>Retrouvez votre année, vos mois, vos kilomètres et le détail de tous vos déplacements.</p>
+      <p><b>Commencez sur l’iPhone, retrouvez tout sur le Mac.</b>Vos données se retrouvent sur vos appareils grâce à votre espace iCloud privé.</p>
+    </div>
+    <p class="pull sync__pull">Vous saisissez là où c’est pratique. <b>Vous gérez votre année là où c’est confortable.</b></p>
+  </div>
+</section>
+
+<!-- iPHONE TERRAIN + VISUELS RÉGIONAUX — [[ASSET_REGIONAL_COVERS]] -->
+<section class="sec" id="iphone" style="padding-top:0">
+  <div class="wrap split">
+    <div class="split__copy">
+      <p class="borne">Sur l’iPhone</p>
+      <h2>Votre quotidien, à portée de main.</h2>
+      <p class="lead">Et un visuel d’accueil choisi selon l’adresse de votre société.</p>
+      <ul class="feat-list">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-gauge"/></svg>Votre mois en un coup d’œil</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-route"/></svg>Vos derniers trajets</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Vos habitudes en un geste</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg>Un trajet en quelques secondes</li>
+      </ul>
+    </div>
+    <div class="carousel reveal" id="regions" aria-roledescription="carrousel" aria-label="Visuels régionaux KmPro">
+      <div class="carousel__track" id="regions-track" tabindex="0">
+        <figure role="group" aria-label="1 sur 1"><img src="assets/regions/geneve-champery.webp" width="1100" height="619" alt="Visuel régional KmPro : Genève – Champéry"><figcaption><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Genève – Champéry</figcaption></figure>
+      </div>
+      <div class="carousel__ui">
+        <div class="carousel__dots" id="regions-dots"></div>
+        <button class="carousel__nav" type="button" id="regions-prev" aria-label="Visuel précédent"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg></button>
+        <button class="carousel__nav" type="button" id="regions-next" aria-label="Visuel suivant"><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAC — [[ASSET_SCREEN_ANNUAL_MAC]] -->
+<section class="sec" id="mac" style="padding-top:0">
+  <div class="wrap mac-wide">
+    <div class="shot reveal"><img src="assets/demo-mac-annee.webp" width="941" height="759" loading="lazy" alt="MacBook affichant le récapitulatif annuel de KmPro, mois par mois (données de démonstration)"></div>
+    <div class="split__copy">
+      <p class="borne">Sur le Mac</p>
+      <h2>Toute votre année, d’un seul regard.</h2>
+      <ul class="feat-list" style="grid-template-columns:1fr">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Votre année, mois par mois</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-gauge"/></svg>Une jauge pour suivre votre volume</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-table"/></svg>Le détail de chaque déplacement</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>La carte et les itinéraires possibles</li>
+      </ul>
+      <p class="kbd-row"><kbd>⌘</kbd><kbd>N</kbd><span>Raccourcis clavier et menus natifs du Mac.</span></p>
     </div>
   </div>
 </section>
@@ -857,7 +943,7 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
             <table>
               <thead id="sheet-head"><tr><th>Date</th><th>Trajet</th><th>Client</th><th class="n">km</th><th class="n">Montant</th></tr></thead>
               <tbody id="sheet-body">
-                <tr><td>06/01</td><td>Annecy</td><td>Atelier Morel</td><td class="n">42</td><td class="n">CHF 31.50</td></tr>
+                <tr><td>06/01</td><td>Lausanne</td><td>Atelier Morel</td><td class="n">42</td><td class="n">CHF 31.50</td></tr>
                 <tr><td>14/01</td><td>Genève</td><td>Studio Léman</td><td class="n">118</td><td class="n">CHF 88.50</td></tr>
                 <tr><td>21/01</td><td>Lausanne</td><td>Maison Favre</td><td class="n">64</td><td class="n">CHF 48.00</td></tr>
                 <tr><td>29/01</td><td>Vevey</td><td>Alpes Usinage</td><td class="n">23</td><td class="n">CHF 17.25</td></tr>
@@ -1006,7 +1092,8 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
 <!-- CTA FINAL — [[ASSET_HERO_IPHONE_MAC]] -->
 <section class="wrap" id="telecharger">
   <div class="final">
-    <img class="final__bg" src="assets/route-annecy-lyon.webp" width="1600" height="900" loading="lazy" alt="Illustration KmPro : une route relie Annecy et son lac à Lyon, un conducteur consulte son iPhone près de sa voiture">
+    <img class="final__bg" src="assets/regions/geneve-champery.webp" width="1100" height="619" loading="lazy" alt="Illustration KmPro : le Léman et les Alpes suisses, entre Genève et Champéry">
+
     <div class="final__copy">
       <p class="borne">Télécharger KmPro</p>
       <h2>Commencez à suivre vos trajets avant d’avoir à les retrouver.</h2>
@@ -1060,14 +1147,14 @@ kbd{font-family:var(--font);font-size:13px;min-width:28px;text-align:center;back
   // Classeur d'exemple : onglets
   const data = [
     {fx: '=SOMME(E2:E5)', head: ['Date','Trajet','Client','km','Montant'], rows: [
-      ['06/01','Annecy','Atelier Morel','42','CHF 31.50'],['14/01','Lyon','Studio Rhône','118','CHF 88.50'],
-      ['21/01','Chambéry','Maison Favre','64','CHF 48.00'],['29/01','Cluses','Alpes Usinage','23','CHF 17.25']], total: ['247','CHF 185.25']},
+      ['06/01','Lausanne','Atelier Morel','42','CHF 31.50'],['14/01','Genève','Studio Léman','118','CHF 88.50'],
+      ['21/01','Sion','Maison Favre','64','CHF 48.00'],['29/01','Vevey','Alpes Usinage','23','CHF 17.25']], total: ['247','CHF 185.25']},
     {fx: '=SOMME(E2:E5)', head: ['Date','Trajet','Client','km','Montant'], rows: [
-      ['03/02','Thonon-les-Bains','Léman Conseil','18','CHF 13.50'],['12/02','Grenoble','Studio Rhône','156','CHF 117.00'],
-      ['19/02','Genève','Atelier Morel','37','CHF 27.75'],['26/02','Aix-les-Bains','Maison Favre','92','CHF 69.00']], total: ['303','CHF 227.25']},
+      ['03/02','Nyon','Léman Conseil','18','CHF 13.50'],['12/02','Berne','Studio Léman','156','CHF 117.00'],
+      ['19/02','Genève','Atelier Morel','37','CHF 27.75'],['26/02','Fribourg','Maison Favre','92','CHF 69.00']], total: ['303','CHF 227.25']},
     {fx: '=SOMME(E2:E5)', head: ['Date','Trajet','Client','km','Montant'], rows: [
-      ['05/03','Annecy','Atelier Morel','75','CHF 56.25'],['11/03','Cluses','Alpes Usinage','12','CHF 9.00'],
-      ['18/03','Lyon','Studio Rhône','210','CHF 157.50'],['27/03','Genève','Léman Conseil','48','CHF 36.00']], total: ['345','CHF 258.75']},
+      ['05/03','Montreux','Atelier Morel','75','CHF 56.25'],['11/03','Morges','Alpes Usinage','12','CHF 9.00'],
+      ['18/03','Zurich','Studio Léman','210','CHF 157.50'],['27/03','Genève','Léman Conseil','48','CHF 36.00']], total: ['345','CHF 258.75']},
     {fx: '=SOMME(D2:D4)', head: ['Mois','','Trajets','km','Montant'], rows: [
       ['Janvier','','4','247','CHF 185.25'],['Février','','4','303','CHF 227.25'],['Mars','','4','345','CHF 258.75']], total: ['895','CHF 671.25']}
   ];
