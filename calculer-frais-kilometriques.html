@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carnet de bord kilométrique : ce que l’administration attend</title>
-<meta name="description" content="Ce que doit contenir un carnet de bord kilométrique en Suisse, pourquoi il est indispensable pour déduire ses frais de véhicule, et comment le tenir sans y passer ses soirées.">
-<link rel="canonical" href="https://kmpro.ch/carnet-de-bord-kilometrique.html">
+<title>Calculer ses frais kilométriques en Suisse : simulateur 2026</title>
+<meta name="description" content="Simulateur de frais kilométriques suisses : indiquez vos kilomètres professionnels, le montant se calcule au taux de référence de CHF 0.75 par kilomètre.">
+<link rel="canonical" href="https://kmpro.ch/calculer-frais-kilometriques.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="KmPro">
-<meta property="og:title" content="Carnet de bord kilométrique : ce que l’administration attend">
-<meta property="og:description" content="Ce que doit contenir un carnet de bord kilométrique en Suisse, pourquoi il est indispensable pour déduire ses frais de véhicule, et comment le tenir sans y passer ses soirées.">
-<meta property="og:url" content="https://kmpro.ch/carnet-de-bord-kilometrique.html">
+<meta property="og:title" content="Calculer ses frais kilométriques en Suisse : simulateur 2026">
+<meta property="og:description" content="Simulateur de frais kilométriques suisses : indiquez vos kilomètres professionnels, le montant se calcule au taux de référence de CHF 0.75 par kilomètre.">
+<meta property="og:url" content="https://kmpro.ch/calculer-frais-kilometriques.html">
 <meta property="og:image" content="https://kmpro.ch/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png">
@@ -110,54 +110,88 @@
 </header>
 
 <main class="wrap">
-<nav class="fil" aria-label="Fil d’Ariane"><a href="./">Accueil</a> <span aria-hidden="true">›</span> <span>Carnet de bord kilométrique</span></nav>
-<p class="maj">Justificatif</p>
-  <h1>Le carnet de bord kilométrique</h1>
-  <p class="chapo">En Suisse, le taux au kilomètre est simple. Ce qui l’est moins, c’est de prouver les kilomètres. Le carnet de bord est la pièce qui fait la différence entre une déduction acceptée et une déduction refusée.</p>
+<nav class="fil" aria-label="Fil d’Ariane"><a href="./">Accueil</a> <span aria-hidden="true">›</span> <span>Calculer ses frais kilométriques</span></nav>
+<p class="maj">Calcul</p>
+  <h1>Calculer ses frais kilométriques</h1>
+  <p class="chapo">En Suisse, le calcul est simple : un montant par kilomètre, multiplié par les kilomètres parcourus à titre professionnel. Pas de puissance fiscale, pas de tranches. Toute la difficulté est ailleurs — dans la preuve des trajets.</p>
 
-  <h2>Pourquoi il est demandé</h2>
-  <p>Un véhicule privé sert rarement uniquement au travail. L’autorité fiscale doit donc pouvoir distinguer la part professionnelle de la part privée. Sans relevé, elle applique une estimation forfaitaire — rarement à votre avantage — ou refuse la déduction.</p>
-  <p>Le carnet de bord est précisément ce relevé : la liste datée de vos déplacements professionnels, avec de quoi les vérifier.</p>
+  <h2 id="simulateur">Simulateur de frais kilométriques 2026</h2>
+  <p>Indiquez vos kilomètres professionnels de l’année. Le taux de référence 2026 est appliqué par défaut ; modifiez-le si votre règlement de frais ou votre fiduciaire en retient un autre.</p>
+  <div class="sim">
+    <form class="sim__in" id="calc" novalidate>
+      <label>Kilomètres professionnels dans l’année
+        <input id="km" type="number" inputmode="numeric" min="0" step="500" value="8000">
+      </label>
+      <label>Taux appliqué (CHF par kilomètre)
+        <input id="taux" type="number" inputmode="decimal" min="0" step="0.05" value="0.75">
+      </label>
+      <p class="src" style="margin:0">Taux de référence 2026 : CHF 0.75. Il était de CHF 0.70 jusqu’en 2025.</p>
+    </form>
+    <div class="sim__out" role="status" aria-live="polite">
+      <p class="sim__k">Estimation pour 2026</p>
+      <p class="sim__amount" id="res">—</p>
+      <ul class="sim__facts">
+        <li id="f-calcul"></li>
+        <li id="f-mois"></li>
+      </ul>
+    </div>
+  </div>
+  <a class="cta" id="sim-cta" href="https://apps.apple.com/app/id6802150703" target="_blank" rel="noopener">Suivre ces kilomètres avec KmPro</a>
+  <p class="src" style="margin-top:-4px">Estimation à titre indicatif. Les pratiques cantonales varient : votre fiduciaire reste la référence.</p>
 
-  <h2>Ce qu’une ligne doit contenir</h2>
-  <div class="card"><div class="tbl"><table>
-    <caption>Le minimum pour qu’un trajet tienne</caption>
-    <thead><tr><th>Information</th><th>Pourquoi elle compte</th></tr></thead>
-    <tbody>
-      <tr><td>Date</td><td>Rattache le trajet à la période fiscale</td></tr>
-      <tr><td>Départ et destination</td><td>Rend la distance vérifiable</td></tr>
-      <tr><td>Motif professionnel</td><td>Client, chantier, visite : c’est ce qui justifie la déduction</td></tr>
-      <tr><td>Kilomètres parcourus</td><td>Base du calcul</td></tr>
-      <tr><td>Véhicule utilisé</td><td>Nécessaire si vous en utilisez plusieurs</td></tr>
-    </tbody>
-  </table></div></div>
-  <p>Un total mensuel et un total annuel complètent le relevé : ce sont eux que reprend la comptabilité, et que votre fiduciaire attend.</p>
+  <h2>La méthode, en trois points</h2>
+  <ol class="etapes">
+    <li><b>Additionner vos kilomètres professionnels</b>
+      <p>Uniquement les déplacements liés à votre activité : clients, chantiers, visites, interventions, formations. Les trajets privés n’entrent pas dans le calcul.</p></li>
+    <li><b>Retenir le taux applicable</b>
+      <p>CHF 0.75 par kilomètre pour 2026, selon l’<a href="taux-kilometrique-2026.html">ordonnance fédérale</a>. Un règlement de frais d’entreprise peut en retenir un autre.</p></li>
+    <li><b>Multiplier</b>
+      <p>C’est tout. Contrairement à la France, le montant par kilomètre ne dépend ni de la puissance du véhicule, ni du kilométrage total.</p></li>
+  </ol>
 
-  <h2>Papier ou numérique ?</h2>
-  <p>Le carnet papier à poser dans la boîte à gants a un mérite : il est sous la main. Il a trois défauts : on oublie de le remplir, les distances y sont approximatives, et il se perd — or il faut pouvoir le produire des années plus tard.</p>
-  <p>Un carnet de bord numérique règle ces trois points à la fois. Les distances sont calculées, la saisie se fait sur le téléphone au moment du déplacement, et le relevé s’exporte en PDF ou en Excel quand on vous le demande.</p>
+  <h2>Ce que le taux couvre</h2>
+  <p>Il est forfaitaire et représente l’ensemble des frais du véhicule : amortissement, entretien, réparations, pneumatiques, carburant ou électricité, et assurance. Ces dépenses ne se déduisent donc pas une seconde fois à côté.</p>
+  <p>Restent traités à part les frais qui ne dépendent pas du véhicule lui-même, comme les parkings et les péages. Conservez-en les justificatifs.</p>
 
-  <figure class="shot"><img src="assets/demo-mac-export.webp" width="941" height="759" loading="lazy" alt="Fenêtre d’export de KmPro sur Mac : choix entre Excel et PDF, par mois ou par année (données de démonstration)"><figcaption>Le carnet de bord se transmet en un fichier, pas en photocopies.</figcaption></figure>
+  <h2>Le vrai sujet : justifier les kilomètres</h2>
+  <p>Un montant sans relevé ne vaut rien. L’autorité fiscale attend un <a href="carnet-de-bord-kilometrique.html">carnet de bord</a> : la liste datée des déplacements, avec le départ, la destination, le motif professionnel et la distance.</p>
+  <p>C’est là que le calcul se complique en pratique — non pas dans la multiplication, mais dans le fait de tenir ce relevé douze mois durant.</p>
 
-  <h2>Le remplir sans y penser</h2>
-  <p>La difficulté du carnet de bord n’est pas sa forme, c’est sa régularité. Personne ne tient douze mois de relevé en le reconstituant en décembre.</p>
-  <p>C’est le problème que KmPro prend en charge : vos déplacements professionnels sont souvent déjà dans votre agenda. L’application lit vos calendriers — iCloud, Google, Outlook — vous propose les trajets correspondants avec la date et l’adresse, calcule les distances, et applique le <a href="taux-kilometrique-2026.html">taux de référence</a>. Vous relisez, vous validez.</p>
-  <ul class="puces">
-    <li>Un mois entier, ou une année complète, en une analyse.</li>
-    <li>Les trajets se saisissent aussi à la main, en quelques secondes, avec plusieurs itinéraires proposés.</li>
-    <li>Le contenu de votre calendrier reste sur votre appareil : rien n’est envoyé sur un serveur.</li>
-  </ul>
-  <a class="cta" href="https://apps.apple.com/app/id6802150703" target="_blank" rel="noopener">Tenir son carnet de bord avec KmPro</a>
-  <p class="src">Informations données à titre indicatif. Les exigences de forme varient selon les cantons et les situations : votre fiduciaire reste la bonne référence.</p>
+  <figure class="shot"><img src="assets/demo-mac-mois.webp" width="941" height="759" loading="lazy" alt="Détail d’un mois dans KmPro sur Mac : liste des trajets avec distances et montants (données de démonstration)"><figcaption>Chaque trajet garde sa date, son motif et sa distance : le relevé se constitue tout seul.</figcaption></figure>
+
+  <h2>Usage mixte : la question qui revient</h2>
+  <p>Une voiture privée sert rarement qu’au travail. Il faut donc pouvoir distinguer la part professionnelle du reste — et c’est précisément ce que permet un relevé tenu au fil de l’année, plutôt qu’une estimation en pourcentage décidée après coup.</p>
+
+  <a class="cta" href="https://apps.apple.com/app/id6802150703" target="_blank" rel="noopener">Découvrir KmPro sur iPhone et Mac</a>
+  <p class="src">Source : <a href="https://www.fedlex.admin.ch/eli/cc/1993/1363_1363_1363/fr" rel="noopener" target="_blank">ordonnance du DFF sur la déduction des frais professionnels (RS 642.118.1)</a>. Informations données à titre indicatif.</p>
+
+<script>
+(function(){
+  var km=document.getElementById('km'), tx=document.getElementById('taux');
+  var res=document.getElementById('res'), ca=document.getElementById('f-calcul'), mo=document.getElementById('f-mois');
+  var cta=document.getElementById('sim-cta');
+  var chf=new Intl.NumberFormat('fr-CH',{style:'currency',currency:'CHF',maximumFractionDigits:2});
+  var chf0=new Intl.NumberFormat('fr-CH',{style:'currency',currency:'CHF',maximumFractionDigits:0});
+  function calc(){
+    var d=Math.max(0, Math.round(+km.value||0)), t=Math.max(0, +tx.value||0), m=d*t;
+    res.textContent=chf.format(m);
+    ca.innerHTML='<span>Calcul : <b>'+d.toLocaleString('fr-CH')+' km × '+t.toFixed(2).replace('.',',')+'</b></span>';
+    mo.innerHTML='<span>Soit environ <b>'+chf.format(m/12)+'</b> par mois</span>';
+    cta.textContent = d>0 ? 'Suivre mes '+chf0.format(m)+' de frais avec KmPro' : 'Suivre ses kilomètres avec KmPro';
+  }
+  ['change','input'].forEach(function(ev){ km.addEventListener(ev,calc); tx.addEventListener(ev,calc); });
+  calc();
+})();
+</script>
 
 <h2>À lire aussi</h2>
-<ul class="aussi"><li><a href="calculer-frais-kilometriques.html">Calculer ses frais kilométriques en Suisse : simulateur 2026</a></li><li><a href="deduction-frais-vehicule-impots.html">Déduire ses frais de véhicule de ses impôts en Suisse</a></li><li><a href="fiduciaires.html">Fiduciaires : proposez KmPro à vos clients</a></li><li><a href="note-de-frais-deplacement.html">Note de frais de déplacement : ce qu’elle doit contenir</a></li><li><a href="taux-kilometrique-2026.html">Taux kilométrique 2026 en Suisse : CHF 0.75 par kilomètre</a></li></ul>
+<ul class="aussi"><li><a href="carnet-de-bord-kilometrique.html">Carnet de bord kilométrique : ce que l’administration attend</a></li><li><a href="deduction-frais-vehicule-impots.html">Déduire ses frais de véhicule de ses impôts en Suisse</a></li><li><a href="fiduciaires.html">Fiduciaires : proposez KmPro à vos clients</a></li><li><a href="note-de-frais-deplacement.html">Note de frais de déplacement : ce qu’elle doit contenir</a></li><li><a href="taux-kilometrique-2026.html">Taux kilométrique 2026 en Suisse : CHF 0.75 par kilomètre</a></li></ul>
 </main>
 
 <footer class="wrap">
   <p>© 2026 KmPro · <a href="./">Accueil</a> · <a href="mentions-legales.html">Mentions légales</a></p>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Carnet de bord kilométrique", "description": "Ce que doit contenir un carnet de bord kilométrique en Suisse, pourquoi il est indispensable pour déduire ses frais de véhicule, et comment le tenir sans y passer ses soirées.", "inLanguage": "fr-FR", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Organization", "name": "KmPro"}, "publisher": {"@type": "Organization", "name": "KmPro", "url": "https://kmpro.ch/"}, "mainEntityOfPage": "https://kmpro.ch/carnet-de-bord-kilometrique.html"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kmpro.ch/"}, {"@type": "ListItem", "position": 2, "name": "Carnet de bord kilométrique", "item": "https://kmpro.ch/carnet-de-bord-kilometrique.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Calculer ses frais kilométriques en Suisse", "description": "Simulateur de frais kilométriques suisses : indiquez vos kilomètres professionnels, le montant se calcule au taux de référence de CHF 0.75 par kilomètre.", "inLanguage": "fr-FR", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Organization", "name": "KmPro"}, "publisher": {"@type": "Organization", "name": "KmPro", "url": "https://kmpro.ch/"}, "mainEntityOfPage": "https://kmpro.ch/calculer-frais-kilometriques.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kmpro.ch/"}, {"@type": "ListItem", "position": 2, "name": "Calculer ses frais kilométriques", "item": "https://kmpro.ch/calculer-frais-kilometriques.html"}]}</script>
 </body>
 </html>
