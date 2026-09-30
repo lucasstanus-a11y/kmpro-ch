@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Note de frais de déplacement : ce qu’elle doit contenir</title>
-<meta name="description" content="Les mentions à faire figurer sur une note de frais de déplacement en Suisse, le rôle du règlement de frais, et le rythme qui évite de tout reconstituer au bouclement.">
-<link rel="canonical" href="https://kmpro.ch/note-de-frais-deplacement.html">
+<title>Modèle Excel de frais kilométriques suisse (2026)</title>
+<meta name="description" content="Modèle Excel gratuit pour suivre ses frais de déplacement professionnels en Suisse : un onglet par mois, le taux de référence 2026, les formules déjà écrites.">
+<link rel="canonical" href="https://kmpro.ch/modele-excel-frais-kilometriques.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="KmPro">
-<meta property="og:title" content="Note de frais de déplacement : ce qu’elle doit contenir">
-<meta property="og:description" content="Les mentions à faire figurer sur une note de frais de déplacement en Suisse, le rôle du règlement de frais, et le rythme qui évite de tout reconstituer au bouclement.">
-<meta property="og:url" content="https://kmpro.ch/note-de-frais-deplacement.html">
+<meta property="og:title" content="Modèle Excel de frais kilométriques suisse (2026)">
+<meta property="og:description" content="Modèle Excel gratuit pour suivre ses frais de déplacement professionnels en Suisse : un onglet par mois, le taux de référence 2026, les formules déjà écrites.">
+<meta property="og:url" content="https://kmpro.ch/modele-excel-frais-kilometriques.html">
 <meta property="og:image" content="https://kmpro.ch/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png">
@@ -110,48 +110,69 @@
 </header>
 
 <main class="wrap">
-<nav class="fil" aria-label="Fil d’Ariane"><a href="./">Accueil</a> <span aria-hidden="true">›</span> <span>Note de frais de déplacement</span></nav>
-<p class="maj">Notes de frais</p>
-  <h1>La note de frais de déplacement</h1>
-  <p class="chapo">Salarié remboursé par son employeur, dirigeant remboursé par sa société ou indépendant : le principe est le même. Une note de frais ne vaut que par ce qu’elle permet de vérifier.</p>
+<nav class="fil" aria-label="Fil d’Ariane"><a href="./">Accueil</a> <span aria-hidden="true">›</span> <span>Modèle Excel</span></nav>
+<p class="maj">Tableur</p>
+  <h1>Modèle Excel de frais de déplacement</h1>
+  <p class="chapo">Tenir ses kilomètres dans un tableur est une bonne idée de départ — à condition que le tableau contienne ce qu’il faut. Voici le nôtre, prêt à l’emploi.</p>
 
-  <h2>Les mentions à faire figurer</h2>
+  <div class="telechargement">
+    <div>
+      <p class="telechargement__k">Modèle gratuit</p>
+      <p class="telechargement__t">Le classeur, prêt à remplir</p>
+      <p class="telechargement__d">Un récapitulatif annuel et un onglet par mois, formules comprises, <b>pré-rempli avec une année complète d’exemple</b> au taux de référence de CHF 0.75. C’est la structure exacte du fichier que produit l’application.</p>
+    </div>
+    <a class="btn-dl" href="assets/modele/KmPro-modele-frais-deplacement-2026-suisse.xlsx" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      Télécharger le modèle Excel
+    </a>
+  </div>
+  <p class="src" style="margin-top:-6px">Fichier .xlsx, 50 Ko, 13 onglets, 139 trajets d’exemple à effacer. Aucune inscription, aucune adresse e-mail demandée.</p>
+
+  <h2>Ce que contient le classeur</h2>
+  <div class="card"><div class="tbl"><table>
+    <caption>Les colonnes de chaque onglet mensuel</caption>
+    <thead><tr><th>Colonne</th><th>Contenu</th><th>Pourquoi</th></tr></thead>
+    <tbody>
+      <tr><td>DATE</td><td>Jour du déplacement</td><td>Rattache le trajet à la période fiscale</td></tr>
+      <tr><td>Véhicule</td><td>Celui que vous avez utilisé</td><td>Nécessaire si vous en avez plusieurs</td></tr>
+      <tr><td>Trajet</td><td>Bureau &gt; Morges AR</td><td>Rend la distance vérifiable</td></tr>
+      <tr><td>Distance km</td><td>Kilomètres parcourus</td><td>Base du calcul</td></tr>
+      <tr><td>Taux</td><td>CHF par kilomètre</td><td>CHF 0.75 par défaut, modifiable</td></tr>
+      <tr><td>TOTAL CHF</td><td>Distance × taux</td><td>Calculé tout seul</td></tr>
+      <tr><td>Description</td><td>Client et motif</td><td>Établit le caractère professionnel</td></tr>
+    </tbody>
+  </table></div></div>
+  <p>L’onglet de tête reprend un mois par ligne et additionne le tout : nombre de trajets, kilomètres et montant de l’année.</p>
+
+  <h2>Le taux, et pourquoi il est modifiable</h2>
+  <p>Le classeur applique le <a href="taux-kilometrique-2026.html">taux de référence 2026</a>, soit CHF 0.75 par kilomètre. Si votre règlement de frais d’entreprise en retient un autre, ou si votre fiduciaire applique une pratique cantonale différente, remplacez simplement la valeur dans la colonne « Taux » — les totaux suivent.</p>
+  <p>Contrairement à la France, il n’y a ni puissance fiscale ni tranches de kilométrage à gérer : un seul montant par kilomètre, quel que soit le véhicule et quel que soit le total annuel.</p>
+
+  <h2>Là où le tableur coince</h2>
   <ul class="puces">
-    <li>la <b>date</b> du déplacement ;</li>
-    <li>le <b>point de départ et la destination</b> ;</li>
-    <li>le <b>motif professionnel</b> : client, chantier, visite, intervention ;</li>
-    <li>la <b>distance parcourue</b> ;</li>
-    <li>le <b>véhicule</b> utilisé ;</li>
-    <li>le <b>montant</b>, obtenu en appliquant le taux retenu.</li>
+    <li><b>Les distances.</b> Il faut les chercher une par une et les retaper.</li>
+    <li><b>Le moment de la saisie.</b> Un tableur s’ouvre sur un ordinateur, rarement en sortant d’un rendez-vous — donc on note plus tard, et on oublie.</li>
+    <li><b>Les formules cassées.</b> Une ligne insérée au mauvais endroit, et un total devient faux sans que rien ne le signale.</li>
+    <li><b>Les trajets récurrents.</b> Un déplacement hebdomadaire sur dix mois, ce sont quarante lignes à recopier.</li>
   </ul>
-  <p>Un total mensuel et un total annuel complètent utilement le document : ce sont eux que reprend la comptabilité.</p>
 
-  <h2>Le règlement de frais, pièce maîtresse</h2>
-  <p>Beaucoup d’entreprises disposent d’un règlement de frais approuvé par l’autorité fiscale cantonale. Il fixe notamment le montant par kilomètre remboursé, qui peut différer du <a href="taux-kilometrique-2026.html">taux de référence fédéral</a>.</p>
-  <p>Si votre société en a un, c’est lui qui s’applique — et le décompte doit s’y conformer. À défaut, le taux de référence sert de repère.</p>
+  <h2>Garder Excel, sans le remplir à la main</h2>
+  <p>KmPro enregistre les trajets au moment où vous les faites, calcule les distances, applique votre taux — puis <b>produit ce fichier</b>, exactement dans cette forme. Vous retrouvez le classeur que vous auriez construit vous-même, sans les heures de saisie.</p>
 
-  <h2>Mensuel plutôt qu’au bouclement</h2>
-  <p>La difficulté n’est jamais la mise en forme, c’est le rythme. Reconstituer une année de déplacements suppose de retrouver des adresses, des dates et des motifs. C’est long, et les oublis coûtent de l’argent — ils réduisent un remboursement auquel on avait droit.</p>
-  <p>Noter les trajets au fil de l’eau et sortir un document chaque mois transforme l’exercice en formalité de quelques minutes.</p>
+  <figure class="shot"><img src="assets/demo-mac-export.webp" width="941" height="759" loading="lazy" alt="Fenêtre d’export de KmPro sur Mac : Excel ou PDF, par mois ou par année (données de démonstration)"><figcaption>Le classeur est produit par l’application : vous récupérez le fichier, pas la corvée.</figcaption></figure>
 
-  <figure class="shot shot--phone" style="max-width:300px"><img src="assets/demo-iphone-export.webp" width="760" height="1030" loading="lazy" alt="Écran Exporter de KmPro sur iPhone : Excel ou PDF, par mois ou année entière (données de démonstration)"><figcaption>Le décompte du mois part depuis l’iPhone, en deux gestes.</figcaption></figure>
-
-  <h2>Combien de temps la conserver</h2>
-  <p>Les pièces justificatives doivent pouvoir être présentées plusieurs années après. Un fichier sauvegardé reste consultable ; des notes éparpillées et un agenda archivé, beaucoup moins.</p>
-
-  <h2>Un document prêt à transmettre</h2>
-  <p>KmPro produit exactement cela : un export Excel avec un onglet par mois, un récapitulatif annuel et de vraies formules, ou un PDF prêt à joindre au dossier. Les exports restent accessibles même sans abonnement actif — vos pièces ne dépendent pas d’un renouvellement.</p>
-  <a class="cta" href="https://apps.apple.com/app/id6802150703" target="_blank" rel="noopener">Essayer KmPro sur iPhone et Mac</a>
-  <p class="src">Informations données à titre indicatif. Les règles applicables dépendent de votre statut, de votre entreprise et de votre canton.</p>
+  <p>Un PDF est également disponible, prêt à joindre à un décompte de frais ou à transmettre à votre <a href="fiduciaires.html">fiduciaire</a>.</p>
+  <a class="cta" href="https://apps.apple.com/app/id6802150703" target="_blank" rel="noopener">Obtenir ses fichiers automatiquement</a>
+  <p class="src">Taux de référence issu de l’<a href="https://www.fedlex.admin.ch/eli/cc/1993/1363_1363_1363/fr" rel="noopener" target="_blank">ordonnance du DFF (RS 642.118.1)</a>. Informations données à titre indicatif.</p>
 
 <h2>À lire aussi</h2>
-<ul class="aussi"><li><a href="calculer-frais-kilometriques.html">Calculer ses frais kilométriques en Suisse : simulateur 2026</a></li><li><a href="carnet-de-bord-kilometrique.html">Carnet de bord kilométrique : ce que l’administration attend</a></li><li><a href="deduction-frais-vehicule-impots.html">Déduire ses frais de véhicule de ses impôts en Suisse</a></li><li><a href="fiduciaires.html">Fiduciaires : proposez KmPro à vos clients</a></li><li><a href="modele-excel-frais-kilometriques.html">Modèle Excel de frais kilométriques suisse (2026)</a></li><li><a href="taux-kilometrique-2026.html">Taux kilométrique 2026 en Suisse : CHF 0.75 par kilomètre</a></li></ul>
+<ul class="aussi"><li><a href="calculer-frais-kilometriques.html">Calculer ses frais kilométriques en Suisse : simulateur 2026</a></li><li><a href="carnet-de-bord-kilometrique.html">Carnet de bord kilométrique : ce que l’administration attend</a></li><li><a href="deduction-frais-vehicule-impots.html">Déduire ses frais de véhicule de ses impôts en Suisse</a></li><li><a href="fiduciaires.html">Fiduciaires : proposez KmPro à vos clients</a></li><li><a href="note-de-frais-deplacement.html">Note de frais de déplacement : ce qu’elle doit contenir</a></li><li><a href="taux-kilometrique-2026.html">Taux kilométrique 2026 en Suisse : CHF 0.75 par kilomètre</a></li></ul>
 </main>
 
 <footer class="wrap">
   <p>© 2026 KmPro · <a href="./">Accueil</a> · <a href="mentions-legales.html">Mentions légales</a></p>
 </footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Note de frais de déplacement", "description": "Les mentions à faire figurer sur une note de frais de déplacement en Suisse, le rôle du règlement de frais, et le rythme qui évite de tout reconstituer au bouclement.", "inLanguage": "fr-FR", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Organization", "name": "KmPro"}, "publisher": {"@type": "Organization", "name": "KmPro", "url": "https://kmpro.ch/"}, "mainEntityOfPage": "https://kmpro.ch/note-de-frais-deplacement.html"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kmpro.ch/"}, {"@type": "ListItem", "position": 2, "name": "Note de frais de déplacement", "item": "https://kmpro.ch/note-de-frais-deplacement.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Modèle Excel de frais kilométriques suisse (2026)", "description": "Modèle Excel gratuit pour suivre ses frais de déplacement professionnels en Suisse : un onglet par mois, le taux de référence 2026, les formules déjà écrites.", "inLanguage": "fr-FR", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Organization", "name": "KmPro"}, "publisher": {"@type": "Organization", "name": "KmPro", "url": "https://kmpro.ch/"}, "mainEntityOfPage": "https://kmpro.ch/modele-excel-frais-kilometriques.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kmpro.ch/"}, {"@type": "ListItem", "position": 2, "name": "Modèle Excel", "item": "https://kmpro.ch/modele-excel-frais-kilometriques.html"}]}</script>
 </body>
 </html>
